@@ -1,0 +1,386 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="Damaris Abigail alas">
+<title>Guia#1 javascript</title>
+<style type="text/css">
+body{
+background-color: black;
+}
+
+input{
+background-color:Pink;
+margin-top:15px;
+display:inline-block;
+padding: 6px;
+width:210px;
+color:black;
+border-radius: 80px;
+border-color:Red;
+font-weight:bold;
+
+}
+h5{
+color:white
+text-align:center;
+font-size:16px;
+font-family:Calibri;
+font-weight:bold;
+}
+footer{
+color:black;
+text-align:center;
+font-size:15px;
+font-family:Calibri;
+background-color:orange;
+margin-top:15px;
+display:inline-block;
+padding: 5px;
+border-radius:20px;
+font-weight:bold;
+}
+
+</style>
+</head>
+<h1 style="color:white">GUIA #1 JAVASCRIPT</h1>
+<table>
+
+   <body>
+<ol>
+     <li><input type="button" onclick=" Ejercicio1()" value="Ejercicio 1"></li>
+     <li><input type="button" onclick=" Ejercicio2()" value="Ejercicio 2"></li>
+     <li><input type="button" onclick=" Ejercicio3()" value="Ejercicio 3"></li>
+     <li><input type="button" onclick=" Ejercicio4()" value="Ejercicio 4"></li>
+     <li><input type="button" onclick=" Ejercicio5()" value="Ejercicio 5"></li>
+     <li><input type="button" onclick=" Ejercicio6()" value="Ejercicio 6"></li>
+     <li><input type="button" onclick=" Ejercicio7()" value="Ejercicio 7"></li>
+     <li><input type="button" onclick=" Ejercicio8()" value="Ejercicio 8"></li>
+     <li><input type="button" onclick=" Ejercicio9()" value="Ejercicio 9"></li>
+     <li><input type="button" onclick=" Ejercicio10()" value="Ejercicio 10"></li>
+     <li><input type="button" onclick=" Ejercicio11()" value="Ejercicio 11"></li>
+     <li><input type="button" onclick=" Ejercicio12()" value="Ejercicio 12"></li>
+    <li><input type="button" onclick=" Ejercicio13()" value="Ejercicio 13"></li>
+
+</ol>
+</table>
+<script type="text/javascript">
+
+function Ejercicio1()
+{
+var Datos="Nombre: Damaris Abigail Alas Guzman\nEdad: 19\nSexo: Femenino\nFecha de Nacimiento: 12/12/1995\nEstado Civil: Soltera\nDomicilio: Cojutepeque Depto.Cuscatlan\nProfesion: Estudiante";
+alert(Datos);
+}
+
+function Ejercicio2(){
+var numeros=new Array();
+var mayor, menor;
+var posmayor;
+var i=0;
+while(i<10){
+	numeros[i] = prompt("Ingrese el numero en la pocision" +i);
+	          //numeros = parseInt(numeros);
+	          mayor= numeros[0];
+	          menor=numeros[0];
+
+            if(mayor< numeros[i]){
+            	alert(numeros);
+            	mayor = numeros[i];
+                 
+            }
+            else if(menor > numeros[i]){
+            	alert(numeros);
+            	menor = numeros[i];
+                 
+            }
+     
+   i++
+  } 
+	alert("El mayor es: "+mayor+"\nEl menor es:  "+ menor);
+}
+
+function Ejercicio3(){
+  var Salario_base;
+  var AFP;
+  var Renta;
+  var ISS;           //AFP= 13% del salario base,Renta= 10% del salario base,ISS= 12% del 
+  var Nombre_empleado;
+  var Cargo=0;
+  var Salario_a_pagar; 
+
+  Nombre_empleado=prompt("Ingrese el nombre empleado");
+ Cargo=prompt("Ingrese el cargo exactamente como aparece en el listado: \n\nGerente\nContador\nSecretaria\nOrdenanza");
+    
+        
+      if(Cargo=="Gerente"){
+                
+                Salario_base=2000;
+                AFP = Salario_base*0.13;
+                Renta = Salario_base*0.10;
+                ISS = Salario_base*0.12;
+                Salario_a_pagar = Salario_base - (AFP+ISS+Renta);
+                alert("Nombre del empleado:  "+Nombre_empleado+"\nCargo:  "+Cargo+"\nSalario base: $"+Salario_base+"\nMonto a pagar: $"+Salario_a_pagar);
+                        } else if (Cargo=="Contador"){
+                
+                Salario_base=1000;
+                AFP = Salario_base*0.13;
+                Renta = Salario_base*0.10;
+                ISS = Salario_base*0.12;
+                Salario_a_pagar = Salario_base - (AFP+ISS+Renta);
+                alert("Nombre del empleado:  "+Nombre_empleado+"\nCargo:  "+Cargo+"\nSalario base: $"+Salario_base+"\nMonto a pagar: $"+Salario_a_pagar);
+                        }
+                        else if (Cargo=="Secretaria"){
+                
+                Salario_base=500;
+                AFP = Salario_base*0.13;
+                Renta = Salario_base*0.10;
+                ISS = Salario_base*0.12;
+                Salario_a_pagar = Salario_base - (AFP+ISS+Renta);
+                alert("Nombre del empleado:  "+Nombre_empleado+"\nCargo:  "+Cargo+"\nSalario base: $"+Salario_base+"\nMonto a pagar: $"+Salario_a_pagar);
+                        }
+             else if (Cargo=="Ordenanza"){
+          
+                Salario_base=300;
+                AFP = Salario_base*0.13;
+                Renta = Salario_base*0.10;
+                ISS = Salario_base*0.12;
+                Salario_a_pagar = Salario_base - (AFP+ISS+Renta);
+                alert("Nombre del empleado:  "+Nombre_empleado+"\nCargo:  "+Cargo+"\nSalario base: $"+Salario_base+"\nMonto a pagar: $"+Salario_a_pagar);
+                        }
+          
+            }
+           
+function Ejercicio4()
+{
+var Distancia;
+var Velocidad =180;
+var Tiempo = 30/60; //Tiempo en horas      	
+ Distancia = Velocidad * Tiempo;
+alert("La distancia recorrida de un vehículo de carreras que se traslada de un punto A a un punto B a 180 Kilómetros/hora, en un tiempo de 30 minutos es:   " +Distancia+"  Kilómetros");
+}
+
+function Ejercicio5(){
+
+var lado_1, lado_2, lado_3;
+lado_1= prompt("Ingresar el valor del primer lado");	
+lado_2= prompt("Ingresar el valor del segundo lado");
+lado_3= prompt("Ingresar el valor del tercer lado");
+
+if(lado_1==lado_2 && lado_2==lado_3){
+   
+    alert("Los 3 lados son iguales\n\nEl triangulo es: EQUILATERO");
+
+   }
+   else if(lado_1==lado_2 || lado_1==lado_3 || lado_2==lado_3){
+   
+    alert("Dos lados son iguales\n\nEl triangulo es: ISÓSCELES");
+
+   }
+    else if(lado_1!=lado_2 || lado_1!=lado_3 || lado_2!=lado_3){
+   
+    alert("No hay lados iguales\n\nEl triangulo es: ESCALENO");
+
+   }
+}
+
+function Ejercicio6()
+{
+var i=0;
+var acumhombres=0;
+var acummujeres=0;
+var nmujeres, nhombre;
+var Nombre=new Array();
+var Apellido=new Array();
+var Sexo= new Array();
+
+while(i<20){
+	Nombre[i] = prompt("Ingresar Nombre del Estudiante  #"+(i+1));
+	Apellido[i] = prompt("Ingresar Apellido del Estudiante  #"+(i+1));
+	Sexo[i]= prompt("Ingresar Sexo del Estudiante  #"+(i+1) +"\n\nm: Para Masculino\nf: Para Femenino");
+	
+     
+      	if(Sexo[i]=="m" || Sexo[i]=="M"){
+      	acumhombres++	
+      
+      }
+     
+        else if(Sexo[i]=="f" || Sexo[i]=="F"){
+      	acummujeres++	
+      }
+      
+      i++ 
+  }
+  alert(Sexo);
+  alert("Cantidad de Mujeres:  " + acummujeres + "\nCantidad de Hombres:  " + acumhombres);
+  
+}
+
+
+function Ejercicio7(){
+var Dia;
+	Dia = prompt("Ingresar un numero del 1 - 7: ");
+	Dia = parseInt(Dia);
+	switch(Dia){
+	case 1:
+	alert("Hoy es:  Domingo");
+	break
+	case 2:
+	alert("Hoy es:  Lunes");
+	break
+	case 3:
+	alert("Hoy es:  Martes");
+	break
+	case 4:
+	alert("Hoy es:  Miercoles");
+	break
+	case 5:
+	alert("Hoy es:  Jueves");
+	break
+	case 6:
+	alert("Hoy es:  Viernes");
+	break
+	case 7:
+	alert("Hoy es:  Sabado");
+	break
+	default: 
+	alert("Valor invalido ingrese un numero del 1-7"); 
+       }
+
+}
+
+
+function Ejercicio8(){
+
+var numeros=new Array();
+var acumpar=0;
+var acumimpar=0;
+
+for (var i=0;i<10;i++){
+numeros[i] = prompt("Ingresar el numero en la pocicion: "+i);
+
+        if(numeros[i] %2 ==0){
+      	acumpar++	
+      
+          }
+     
+        else if(numeros[i]%2 != 0){
+      	acumimpar++	
+          }
+
+}
+ alert(numeros);    
+alert("La cantidad de numeros pares es:  "+acumpar+"\n\nLa cantidad de numeros impares es: "+acumimpar);       	
+ 
+}
+
+
+function Ejercicio9(){
+var AproxDiametro;
+var Diametro;
+var C=25;
+var PI=3.141592654;
+Diametro = C/PI;
+AproxDiametro= Diametro.toFixed(3);
+alert("El diámetro de una circunferencia que mide 25cm es:  "+AproxDiametro+"cm");
+}
+ function Ejercicio10(){
+ 	var m=400;//kg (masa)
+ 	var g = 9.8;//m/s^2 (gravedad)
+ 	var AproxW;
+ 	var W; //Newtons(peso) 
+ 	W = m*g;
+ 	AproxW = W.toFixed(3);
+     alert("El peso de un cuerpo con masa m=400kg con una gravedad(en la tierra)=9.8 m/s^2 es: " +AproxW+" N");
+ } 
+
+ function Ejercicio11(){
+var ml;
+ml=prompt('Porfavor ingrese el numero de la tabla que desea saber','');
+
+ml=parseInt(ml);
+
+document.write("<table border='5'>");
+ 
+var x=0;
+for (x = 1; x <= 10; x++){
+
+	tabel=ml*x;
+
+	document.write("<tr><td>");
+
+	document.write(ml+"x"+x+"="+ tabel + "<br>");
+
+	document.write("</td></tr>");
+
+}
+document.write("</table>");
+ }
+
+function Ejercicio12(){
+	var aproxtotal_a_pagar;
+	var total_a_pagar;
+	var total_de_la_compra
+    var aleatorio = Math.round(Math.random()*2);
+    var color_bola;
+    
+    //alert(aleatorio);
+	
+	total_de_la_compra=prompt("Ingrese el total de la compra: ");
+
+	
+	if(aleatorio==0){
+ 	color_bola="Dorado";
+     total_a_pagar = total_de_la_compra - (total_de_la_compra*0.40);
+     aproxtotal_a_pagar = total_a_pagar.toFixed(2);
+     alert("Felicidades por sacar la bola color "+color_bola+" Optiene un Descuento del 40% y ademas se ha hecho acreedora de un vale de descuento de $10  para su próxima compra."+ "\n\nTotal de la compra: $"+total_de_la_compra+"\nTotal a Pagar: $"+aproxtotal_a_pagar);
+      }
+      else if(aleatorio==1){
+ 	color_bola="Verde";
+     total_a_pagar = total_de_la_compra - (total_de_la_compra*0.30);
+     aproxtotal_a_pagar = total_a_pagar.toFixed(2);
+     alert("color bola: "+color_bola+" \nDescuento del 30%"+ "\n\nTotal de la compra: $"+total_de_la_compra+"\nTotal a Pagar: $"+aproxtotal_a_pagar);
+      }
+      else if(aleatorio==2){
+ 	color_bola="Naranja";
+     total_a_pagar = total_de_la_compra - (total_de_la_compra*0.10);
+     aproxtotal_a_pagar = total_a_pagar.toFixed(2);
+     alert("color bola: "+color_bola+" \nDescuento del 10%"+ "\n\nTotal de la compra: $"+total_de_la_compra+"\nTotal a Pagar: $"+aproxtotal_a_pagar);
+      }
+
+ }
+ function Ejercicio13(){
+var i=0;
+var aparatos = new Array();
+var consumo = new Array();
+var consumo = new Array();
+var cantidad_de_aparatos  = new Array();
+var dias = new Array();
+var horas = new Array();
+var total_a_pagar= new Array();
+var consumo_por_aparato;
+var acum;
+
+cantidad_de_aparatos = prompt("Ingrese la cantidad de  aparatos electronicos que posee:");
+while(i<cantidad_de_aparatos){
+aparatos[i]= prompt("Ingrese el nombre del aparato electronico:" +i);
+consumo[i]= prompt("Ingrese la cantidad de watt de consumo del aparato electronico:"+i);
+dias[i]= prompt("Ingrese los dias al mes que pasa encendido el aparato"+i);
+horas[i] = prompt("Ingrese la cantidad de horas por dia que utiliza el aparato electronico:"+i);
+consumo_por_aparato=(consumo/1000)*(dias*horas);
+total_a_pagar[i]=consumo_por_aparato*0.67;
+
+i++
+
+}
+alert("Total a pagar:" + acum);
+ }
+
+</script>
+ <footer>
+
+<center><h5>Coprythg by Damaris Abigail Alas</h5></center>
+</footer>
+
+
+   </body>
+</html> 
