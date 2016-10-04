@@ -1,0 +1,109 @@
+/* Product - La clase Pizza:de esta clase se necesitan crear muchos objetos con atributos y metodos diferentes ,pero con algunos elementos comunes*/
+
+var Pizza = function () {//clase pizza
+
+    this.prepare = function () {//metodo prepare 
+        console.log("Creando " + this.name);
+        console.log("Agregando salsa");
+        console.log("Agregando masa ");
+        console.log("Ingredientes: ");
+        for (var i = 0; i < this.ingredientes.length; i++) {
+            console.log("  " + this.ingredientes[i]);
+        }
+    };
+    this.caja = function () {
+        console.log("Poner doce piezas");
+    };
+    this.banquete = function () {
+        console.log("Un banquete");
+    };
+    this.pieza = function () {
+        console.log("Una pieza");
+    };
+    
+    this.getName = function () {
+        return this.name;
+    };
+
+};
+
+/* ConcreteProduct - Crea el estilo de piza neyor es el producto concreto */
+
+var NYEstilo = function () {
+    this.name = "NY ";
+    this.ingredientes = ["Carne Peperoni Queso"];
+};
+
+NYEstilo.prototype = new Pizza();
+NYEstilo.prototype.constructor = NYEstilo;
+
+/* ConcreteProduct - Crea el estilo de piza hawai es un producto concreto */
+
+var HWEstilo = function () {
+    this.name = "Estilo de pizza Hawayana";
+    this.ingredientes = ["Piña Mozzarella Queso"];
+    
+};
+
+HWEstilo.prototype = new Pizza();
+HWEstilo.prototype.constructor = HWEstilo;
+
+/* Creator - Clase Factoria */
+
+var PizzaHut = function () {//esta es la clase factoria
+
+    this.orden = function () {
+        var pizza = this.createPizza();
+        pizza.prepare();
+        pizza.caja();
+        pizza.banquete();
+        pizza.pieza();
+        return pizza
+    };
+
+    // implementaciòn de la ab createPizza();
+
+};
+
+/* ConcreteCreator - Factoria concreta */
+
+var NYPizza = function () {
+    // OJO------METODO FACTORIA
+    this.createPizza = function () {
+        return new NYEstilo();//producto concreto
+    };
+};
+
+NYPizza.prototype = new PizzaHut();//factoria concreta hereda de la clase factoria
+NYPizza.prototype.constructor = NYPizza;
+
+/* ConcreteCreator - Factoria concreta */
+var HWPizza = function () {
+   // OJO------METODO FACTORIA
+    this.createPizza = function () {
+        return new HWEstilo();// se invoca un  producto concreto
+    };
+};
+
+HWPizza.prototype = new PizzaHut();//factoria concreta  hereda de la clase fatoria
+HWPizza.prototype.constructor = HWPizza;
+
+/* APLICACION PARA PROBAR EL PATRÒN */
+
+var Application = function () {
+    this.run = function () {
+        
+        var ny1 = new NYPizza();
+        var HW1 = new HWPizza();
+        
+        var pizza = ny1.orden();
+        console.log("Astrid ordenó " + pizza.getName());
+        
+        pizza = HW1.orden();
+        console.log("Maria ordenó " + pizza.getName());
+        
+    };
+};
+
+var app = new Application();
+app.run();
